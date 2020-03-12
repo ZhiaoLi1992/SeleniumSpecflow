@@ -129,8 +129,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\CustomTransfer.cs" />
+    <Compile Include="Class\Error.cs" />
     <Compile Include="Class\TimestampoMinuteConverter.cs" />
     <Compile Include="Class\Student.cs" />
+    <Compile Include="Steps\SATSteps.cs" />
     <Compile Include="Steps\OnlineShoppingFeatureSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\StepArgurmentTransformationsStep1.cs" />
@@ -140,6 +143,7 @@
     <None Include="App.config" />
     <None Include="Features\Conversion.feature" />
     <None Include="Features\OnlineShoppingFeature.feature" />
+    <None Include="Features\SAT.feature" />
     <None Include="Features\StepArgurmentTransformations.feature" />
     <None Include="Features\StudentInfoTransferFeature.feature" />
     <None Include="packages.config" />

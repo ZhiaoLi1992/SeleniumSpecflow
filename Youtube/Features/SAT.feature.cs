@@ -20,22 +20,22 @@ namespace Youtube.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("StudentInfoTransferFeature")]
-    public partial class StudentInfoTransferFeatureFeature
+    [NUnit.Framework.DescriptionAttribute("SAT")]
+    public partial class SATFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "StudentInfoTransferFeature.feature"
+#line 1 "SAT.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "StudentInfoTransferFeature", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "SAT", "\tpractice step argument transformation", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -74,13 +74,13 @@ namespace Youtube.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Pass data through Specflow tables for Student object")]
+        [NUnit.Framework.DescriptionAttribute("Update User Password")]
         [NUnit.Framework.CategoryAttribute("mytag")]
-        public virtual void PassDataThroughSpecflowTablesForStudentObject()
+        public virtual void UpdateUserPassword()
         {
             string[] tagsOfScenario = new string[] {
                     "mytag"};
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Pass data through Specflow tables for Student object", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update User Password", null, new string[] {
                         "mytag"});
 #line 5
 this.ScenarioInitialize(scenarioInfo);
@@ -102,31 +102,23 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                            "firstName",
-                            "lastName",
-                            "age",
-                            "nationality"});
-                table2.AddRow(new string[] {
-                            "zhiao",
-                            "li",
-                            "28",
-                            "Chinese"});
-                table2.AddRow(new string[] {
-                            "luyang",
-                            "yu",
-                            "29",
-                            "Canadian"});
-                table2.AddRow(new string[] {
-                            "test",
-                            "nobody",
-                            "50",
-                            "Japanese"});
 #line 6
- testRunner.Given("I have entered following info for Student", ((string)(null)), table2, "Given ");
+    testRunner.Given("The original user was created over 10 days ago", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 11
- testRunner.Then("Student info should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 7
+    testRunner.When("I update the users password to \"some password\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                            "ErrorCode",
+                            "ErrorDescription"});
+                table1.AddRow(new string[] {
+                            "442",
+                            "Out of date user"});
+                table1.AddRow(new string[] {
+                            "28",
+                            "Changes were not saved"});
+#line 8
+    testRunner.Then("I should see the following errors", ((string)(null)), table1, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
