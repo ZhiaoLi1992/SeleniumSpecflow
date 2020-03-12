@@ -26,7 +26,7 @@ namespace Youtube.Steps
         [Then(@"the result should be (.*) on the screen")]
         public void ThenTheResultShouldBeOnTheScreen(Decimal p0)
         {
-            Console.WriteLine("Test Result");
+            Console.WriteLine("Test Result");   
             Assert.AreEqual(p0, convertedResult);
         }
 

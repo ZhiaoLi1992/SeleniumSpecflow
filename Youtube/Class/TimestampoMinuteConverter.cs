@@ -11,7 +11,7 @@ namespace Youtube.Class
         public double ConvertToMinutes(TimeSpan ts)
         {
             return ts.TotalMinutes;
-        }
+        }   
 
     }
 }
