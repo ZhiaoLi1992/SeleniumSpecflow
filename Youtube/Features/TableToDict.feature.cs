@@ -20,25 +20,22 @@ namespace Youtube.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("SAT")]
-    [NUnit.Framework.CategoryAttribute("Important")]
-    public partial class SATFeature
+    [NUnit.Framework.DescriptionAttribute("TableToDict")]
+    public partial class TableToDictFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-        private string[] _featureTags = new string[] {
-                "Important"};
+        private string[] _featureTags = ((string[])(null));
         
-#line 1 "SAT.feature"
+#line 1 "TableToDict.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "SAT", "\tpractice step argument transformation", ProgrammingLanguage.CSharp, new string[] {
-                        "Important"});
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "TableToDict", "\tTransfer table to dictionary", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -77,15 +74,15 @@ namespace Youtube.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Update User Password")]
-        [NUnit.Framework.CategoryAttribute("SAT")]
-        public virtual void UpdateUserPassword()
+        [NUnit.Framework.DescriptionAttribute("Table to dictionary")]
+        [NUnit.Framework.CategoryAttribute("TTD")]
+        public virtual void TableToDictionary()
         {
             string[] tagsOfScenario = new string[] {
-                    "SAT"};
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update User Password", null, new string[] {
-                        "SAT"});
-#line 6
+                    "TTD"};
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Table to dictionary", null, new string[] {
+                        "TTD"});
+#line 4
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -105,23 +102,47 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 7
-    testRunner.Given("The original user was created over 10 days ago", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                            "id",
+                            "firstName"});
+                table3.AddRow(new string[] {
+                            "201",
+                            "Amaya"});
+                table3.AddRow(new string[] {
+                            "202",
+                            "Kaden"});
+                table3.AddRow(new string[] {
+                            "203",
+                            "Jubei"});
+                table3.AddRow(new string[] {
+                            "204",
+                            "Bridget"});
+                table3.AddRow(new string[] {
+                            "205",
+                            "Kiren"});
+                table3.AddRow(new string[] {
+                            "206",
+                            "Joy"});
+                table3.AddRow(new string[] {
+                            "207",
+                            "Owen"});
+                table3.AddRow(new string[] {
+                            "208",
+                            "Dylan"});
+                table3.AddRow(new string[] {
+                            "209",
+                            "Marcos"});
+                table3.AddRow(new string[] {
+                            "210",
+                            "Hunter"});
+                table3.AddRow(new string[] {
+                            "211",
+                            "Jacob"});
+#line 5
+ testRunner.Given("I have a table", ((string)(null)), table3, "Given ");
 #line hidden
-#line 8
-    testRunner.When("I update the users password to \"some password\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                            "ErrorCode",
-                            "ErrorDescription"});
-                table1.AddRow(new string[] {
-                            "442",
-                            "Out of date user"});
-                table1.AddRow(new string[] {
-                            "28",
-                            "Changes were not saved"});
-#line 9
-    testRunner.Then("I should see the following errors", ((string)(null)), table1, "Then ");
+#line 18
+ testRunner.Then("transfer table to dictionary", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

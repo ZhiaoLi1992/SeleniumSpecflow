@@ -21,5 +21,16 @@ namespace Youtube.Class
         {
             return table.CreateSet<Error>();
         }
+        [StepArgumentTransformation]
+        public Dictionary<int,string> SnowboardTransform(Table table)
+        {
+            Dictionary<int, string> d = new Dictionary<int, string>();
+            foreach(var row in table.Rows)
+            {
+                d.Add(Int32.Parse(row[0]), row[1]);
+            }
+            return d;
+        }
+
     }
 }

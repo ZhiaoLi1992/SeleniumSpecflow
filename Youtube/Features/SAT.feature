@@ -1,7 +1,8 @@
-﻿Feature: SAT
+﻿@Important
+Feature: SAT
 	practice step argument transformation
 
-@mytag
+@SAT
 Scenario: Update User Password
     Given The original user was created over 10 days ago
     When I update the users password to "some password"
